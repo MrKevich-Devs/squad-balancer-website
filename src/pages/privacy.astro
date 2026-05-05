@@ -8,16 +8,16 @@ import { ArrowLeft } from 'lucide-react';
 <Layout title="Política de Privacidad">
   <Navbar />
   
-  <main class="pt-32 pb-20">
-    <div class="max-w-3xl mx-auto px-4">
-      <a href="/" class="inline-flex items-center gap-2 text-brand-primary mb-8 hover:underline">
-        <ArrowLeft size={16} />
-        Volver al inicio
-      </a>
+  <main class="max-w-4xl mx-auto px-4 py-32">
+    <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-brand-primary hover:text-brand-primary-light transition-colors mb-12">
+      <ArrowLeft size={20} />
+      Volver al inicio
+    </a>
+    
+    <article class="max-w-none">
+      <h1 class="text-4xl font-bold mb-4 text-white">Política de Privacidad</h1>
+      <p class="text-slate-400 mb-8">Última actualización: 04 de Mayo, 2026</p>
       
-      <article class="max-w-none">
-        <h1 class="text-4xl font-bold mb-4 text-white">Política de Privacidad</h1>
-        <p class="text-slate-400 mb-8">Última actualización: 04 de Mayo, 2026</p>
         
         <div class="space-y-8 text-slate-300 leading-relaxed">
           <section>
