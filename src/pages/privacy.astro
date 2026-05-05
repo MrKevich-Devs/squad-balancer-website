@@ -1,88 +1,156 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import { ArrowLeft } from 'lucide-react';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { ArrowLeft } from "lucide-react";
 ---
 
 <Layout title="Política de Privacidad">
   <Navbar />
-  
+
   <main class="max-w-4xl mx-auto px-4 py-32">
-    <a href={import.meta.env.BASE_URL} class="inline-flex items-center gap-2 text-brand-primary hover:text-brand-primary-light transition-colors mb-12">
+    <a
+      href={import.meta.env.BASE_URL}
+      class="inline-flex items-center gap-2 text-brand-primary hover:text-brand-primary-light transition-colors mb-12"
+    >
       <ArrowLeft size={20} />
       Volver al inicio
     </a>
-    
+
     <article class="max-w-none">
       <h1 class="text-4xl font-bold mb-4 text-white">Política de Privacidad</h1>
       <p class="text-slate-400 mb-8">Última actualización: 04 de Mayo, 2026</p>
-      
-        
-        <div class="space-y-8 text-slate-300 leading-relaxed">
-          <section>
-            <p>SquadBalancer ("nosotros", "nuestro" o "nos") se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, utilizamos y compartimos información cuando utiliza nuestra aplicación móvil, SquadBalancer (la "Aplicación").</p>
-          </section>
 
-          <section>
-            <h2 class="text-2xl font-bold text-white mb-4">1. Información que recopilamos</h2>
-            <h3 class="text-xl font-semibold text-brand-primary mb-2">A. Información almacenada localmente</h3>
-            <p>SquadBalancer está diseñado para respetar su privacidad. La mayoría de los datos creados en la Aplicación, incluyendo:</p>
-            <ul class="list-disc pl-6 space-y-2 mt-2">
-              <li>Nombres de jugadores, atributos y niveles de habilidad.</li>
-              <li>Configuraciones de equipo e historial de partidos.</li>
-              <li>Ajustes y preferencias de la aplicación.</li>
-            </ul>
-            <p class="mt-4 font-bold text-white">Se almacena localmente en su dispositivo utilizando el almacenamiento interno de Android (DataStore y base de datos Room). No tenemos acceso a estos datos y no se cargan en nuestros servidores.</p>
-          </section>
+      <div class="space-y-8 text-slate-300 leading-relaxed">
+        <section>
+          <p>
+            SquadBalancer ("nosotros", "nuestro" o "nos") se compromete a
+            proteger su privacidad. Esta Política de Privacidad explica cómo
+            recopilamos, utilizamos y compartimos información cuando utiliza
+            nuestra aplicación móvil, SquadBalancer (la "Aplicación").
+          </p>
+        </section>
 
-          <section>
-            <h3 class="text-xl font-semibold text-brand-primary mb-2">B. Información recopilada automáticamente (Terceros)</h3>
-            <p class="text-slate-300">Para proporcionar y monetizar nuestros servicios, utilizamos SDKs de terceros que pueden recopilar información automáticamente:</p>
-            <ul class="list-disc pl-6 space-y-2 mt-2 text-slate-300">
-              <li><strong>Google AdMob:</strong> Recopila IDs de publicidad e información del dispositivo para servir anuncios personalizados o no personalizados.</li>
-              <li><strong>Google User Messaging Platform (UMP):</strong> Recopila información de consentimiento para cumplir con las regulaciones GDPR y CCPA.</li>
-            </ul>
-          </section>
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            1. Información que recopilamos
+          </h2>
+          <h3 class="text-xl font-semibold text-brand-primary mb-2">
+            A. Información almacenada localmente
+          </h3>
+          <p>
+            SquadBalancer está diseñado para respetar su privacidad. La mayoría
+            de los datos creados en la Aplicación, incluyendo:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 mt-2">
+            <li>Nombres de jugadores, atributos y niveles de habilidad.</li>
+            <li>Configuraciones de equipo e historial de partidos.</li>
+            <li>Ajustes y preferencias de la aplicación.</li>
+          </ul>
+          <p class="mt-4 font-bold text-white">
+            Se almacena localmente en su dispositivo utilizando el
+            almacenamiento interno de Android (DataStore y base de datos Room).
+            No tenemos acceso a estos datos y no se cargan en nuestros
+            servidores.
+          </p>
+        </section>
 
-          <section>
-            <h2 class="text-2xl font-bold text-white mb-4">2. Cómo utilizamos su información</h2>
-            <p>Utilizamos la información recopilada por terceros para:</p>
-            <ul class="list-disc pl-6 space-y-2 mt-2">
-              <li>Servir anuncios para mantener la Aplicación gratuita para los usuarios.</li>
-              <li>Cumplir con las regulaciones de privacidad globales (GDPR/CCPA).</li>
-              <li>Analizar el rendimiento y la estabilidad de la Aplicación (informes de fallos).</li>
-            </ul>
-          </section>
+        <section>
+          <h3 class="text-xl font-semibold text-brand-primary mb-2">
+            B. Información recopilada automáticamente (Terceros)
+          </h3>
+          <p class="text-slate-300">
+            Para proporcionar y monetizar nuestros servicios, utilizamos SDKs de
+            terceros que pueden recopilar información automáticamente:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 mt-2 text-slate-300">
+            <li>
+              <strong>Google AdMob:</strong> Recopila IDs de publicidad e información
+              del dispositivo para servir anuncios personalizados o no personalizados.
+            </li>
+            <li>
+              <strong>Google User Messaging Platform (UMP):</strong> Recopila información
+              de consentimiento para cumplir con las regulaciones GDPR y CCPA.
+            </li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 class="text-2xl font-bold text-white mb-4">3. Intercambio de datos</h2>
-            <p>No vendemos sus datos personales. La información sólo se comparte con proveedores externos (Google AdMob) como se describe anteriormente para facilitar los servicios de publicidad.</p>
-          </section>
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            2. Cómo utilizamos su información
+          </h2>
+          <p>Utilizamos la información recopilada por terceros para:</p>
+          <ul class="list-disc pl-6 space-y-2 mt-2">
+            <li>
+              Servir anuncios para mantener la Aplicación gratuita para los
+              usuarios.
+            </li>
+            <li>
+              Cumplir con las regulaciones de privacidad globales (GDPR/CCPA).
+            </li>
+            <li>
+              Analizar el rendimiento y la estabilidad de la Aplicación
+              (informes de fallos).
+            </li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 class="text-2xl font-bold text-white mb-4">4. Sus derechos (GDPR / CCPA)</h2>
-            <p>Dependiendo de su ubicación, puede tener los siguientes derechos con respecto a sus datos:</p>
-            <ul class="list-disc pl-6 space-y-2 mt-2">
-              <li><strong>Acceso y eliminación:</strong> Puede eliminar todos los datos de su Aplicación en cualquier momento borrando la caché/datos de la Aplicación en los ajustes de su Android o desinstalando la Aplicación.</li>
-              <li><strong>Opciones de anuncios:</strong> Puede inhabilitar la publicidad personalizada a través de los ajustes de su dispositivo Android (Google > Anuncios).</li>
-            </ul>
-          </section>
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            3. Intercambio de datos
+          </h2>
+          <p>
+            No vendemos sus datos personales. La información sólo se comparte
+            con proveedores externos (Google AdMob) como se describe
+            anteriormente para facilitar los servicios de publicidad.
+          </p>
+        </section>
 
-          <section>
-            <h2 class="text-2xl font-bold text-white mb-4">5. Privacidad de los niños</h2>
-            <p>SquadBalancer no recopila conscientemente información personal de niños menores de 13 años. Si cree que hemos recopilado inadvertidamente dicha información, póngase en contacto con nosotros para que podamos eliminarla.</p>
-          </section>
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            4. Sus derechos (GDPR / CCPA)
+          </h2>
+          <p>
+            Dependiendo de su ubicación, puede tener los siguientes derechos con
+            respecto a sus datos:
+          </p>
+          <ul class="list-disc pl-6 space-y-2 mt-2">
+            <li>
+              <strong>Acceso y eliminación:</strong> Puede eliminar todos los datos
+              de su Aplicación en cualquier momento borrando la caché/datos de la
+              Aplicación en los ajustes de su Android o desinstalando la Aplicación.
+            </li>
+            <li>
+              <strong>Opciones de anuncios:</strong> Puede inhabilitar la publicidad
+              personalizada a través de los ajustes de su dispositivo Android (Google
+              > Anuncios).
+            </li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 class="text-2xl font-bold text-white mb-4">6. Contacto</h2>
-            <p>Si tiene alguna pregunta sobre esta Política de Privacidad, póngase en contacto con nosotros en:</p>
-            <p class="font-bold text-brand-primary">squadbalancer.app@gmail.com</p>
-          </section>
-        </div>
-      </article>
-    </div>
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">
+            5. Privacidad de los niños
+          </h2>
+          <p>
+            SquadBalancer no recopila conscientemente información personal de
+            niños menores de 13 años. Si cree que hemos recopilado
+            inadvertidamente dicha información, póngase en contacto con nosotros
+            para que podamos eliminarla.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-white mb-4">6. Contacto</h2>
+          <p>
+            Si tiene alguna pregunta sobre esta Política de Privacidad, póngase
+            en contacto con nosotros en:
+          </p>
+          <p class="font-bold text-brand-primary">mrkevich.dev@gmail.com</p>
+        </section>
+      </div>
+    </article>
   </main>
-  
+
   <Footer />
 </Layout>
