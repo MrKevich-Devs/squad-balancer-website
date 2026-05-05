@@ -1,0 +1,31 @@
+---
+import { Trophy } from 'lucide-react';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="glass rounded-2xl px-6 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 group">
+        <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center shadow-glow-primary group-hover:scale-105 transition-transform">
+          <Trophy className="text-brand-bg w-6 h-6" />
+        </div>
+        <span class="text-xl font-bold tracking-tight text-white">Squad<span class="text-brand-primary">Balancer</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-sm font-bold text-slate-300 hover:text-brand-primary transition-colors">Características</a>
+        <a href="#download" class="text-sm font-bold text-slate-300 hover:text-brand-primary transition-colors">Beta Cerrada</a>
+        <a href="/privacy" class="text-sm font-bold text-slate-300 hover:text-brand-primary transition-colors">Privacidad</a>
+      </div>
+      
+      <div>
+        <a 
+          href="#download" 
+          class="bg-brand-primary text-brand-bg px-5 py-2.5 rounded-xl font-bold text-sm hover:bg-brand-primary-dark transition-all hover:shadow-glow-primary active:scale-95"
+        >
+          Descargar
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

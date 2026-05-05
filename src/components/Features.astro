@@ -1,0 +1,79 @@
+---
+import { Wand2, Users, Trophy, Share2, MousePointer2, Smartphone, Sparkles, Clock } from 'lucide-react';
+
+const features = [
+  {
+    title: "Balance Inteligente",
+    description: "Nuestros algoritmos consideran atributos específicos para crear enfrentamientos parejos.",
+    icon: Wand2,
+    color: "brand-primary",
+    class: "md:col-span-2",
+    status: "Disponible"
+  },
+  {
+    title: "Magic Import",
+    description: "Importá jugadores directamente desde WhatsApp o notas sin escribir uno por uno.",
+    icon: Sparkles,
+    color: "brand-accent",
+    class: "md:col-span-1",
+    status: "Disponible"
+  },
+  {
+    title: "Arquetipos Reales",
+    description: "Cada jugador es analizado para asignarle un rol: El Maestro, La Muralla o Elite Total.",
+    icon: Trophy,
+    color: "brand-primary",
+    class: "md:col-span-1",
+    status: "Disponible"
+  },
+  {
+    title: "Control Manual",
+    description: "Ajustá los equipos manualmente arrastrando jugadores si preferís tu criterio.",
+    icon: MousePointer2,
+    color: "brand-primary",
+    class: "md:col-span-1",
+    status: "Disponible"
+  },
+  {
+    title: "Historial & ELO",
+    description: "Próximamente: Seguí el rendimiento de tus amigos y generá un ranking real.",
+    icon: Clock,
+    color: "brand-muted",
+    class: "md:col-span-1",
+    status: "Próximamente",
+    isTeaser: true
+  }
+];
+---
+
+<section id="features" class="py-24 bg-brand-bg relative">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Lo que podés hacer <br/><span class="text-brand-primary">hoy mismo</span></h2>
+      <p class="text-slate-400 max-w-2xl mx-auto">Funciones esenciales ya disponibles en la versión Alpha.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {features.map((f) => (
+        <div class={`glass-card p-8 rounded-3xl relative overflow-hidden group ${f.class} ${f.isTeaser ? 'opacity-70 bg-white/5' : ''}`}>
+          <div class="flex justify-between items-start mb-6">
+            <div class={`w-12 h-12 rounded-2xl flex items-center justify-center ${f.color === 'brand-primary' ? 'bg-brand-primary/10 text-brand-primary' : f.color === 'brand-accent' ? 'bg-brand-accent/10 text-brand-accent' : 'bg-white/10 text-slate-400'}`}>
+              <f.icon size={24} />
+            </div>
+            <span class={`text-[10px] uppercase font-bold tracking-widest px-2 py-1 rounded-md border ${f.isTeaser ? 'border-white/10 text-slate-500' : 'border-brand-primary/20 text-brand-primary'}`}>
+              {f.status}
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-bold mb-3 text-white">{f.title}</h3>
+          <p class="text-slate-400 leading-relaxed text-sm">{f.description}</p>
+          
+          <!-- Decorative Glow -->
+          {!f.isTeaser && (
+            <div class={`absolute -bottom-4 -right-4 w-24 h-24 blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 ${f.color === 'brand-primary' ? 'bg-brand-primary' : 'bg-brand-accent'}`}></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

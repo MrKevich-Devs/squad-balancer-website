@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@import "@fontsource/outfit";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  --color-brand-primary: #10B981;
+  --color-brand-primary-dark: #059669;
+  --color-brand-bg: #020617;
+  --color-brand-surface: #0F172A;
+  --color-brand-accent: #F97316;
+  --color-brand-accent-hover: #EA580C;
+  
+  --text-brand-on-bg: #F8FAFC;
+  --text-brand-on-surface: #F1F5F9;
+  --text-brand-muted: #CBD5E1;
+  
+  --shadow-glow-primary: 0 0 20px rgba(16, 185, 129, 0.3);
+  --shadow-glow-accent: 0 0 20px rgba(249, 115, 22, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-on-bg font-sans antialiased selection:bg-brand-primary/30;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-bold;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-brand-surface/70 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-brand-surface/40 backdrop-blur-sm border border-white/5 hover:border-brand-primary/30 transition-colors duration-300;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-white via-white to-brand-primary;
+  }
+  
+  .bg-gradient-premium {
+    @apply bg-gradient-to-br from-brand-primary/20 via-brand-bg to-brand-bg;
+  }
+}

@@ -1,0 +1,58 @@
+---
+import { Trophy, Share2, Users } from 'lucide-react';
+---
+
+<footer class="bg-brand-bg border-t border-white/5 pt-20 pb-10">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div class="md:col-span-2">
+        <a href="/" class="flex items-center gap-2 mb-6">
+          <div class="w-8 h-8 bg-brand-primary rounded-lg flex items-center justify-center">
+            <Trophy className="text-brand-bg w-5 h-5" />
+          </div>
+          <span class="text-xl font-bold tracking-tight text-white">Squad<span class="text-brand-primary">Balancer</span></span>
+        </a>
+        <p class="text-slate-400 max-w-sm mb-8">
+          La herramienta definitiva para capitanes de fútbol. 
+          Equilibrio justo, juego épico.
+        </p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-300 hover:bg-brand-primary hover:text-brand-bg transition-all">
+            <Users size={20} />
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-300 hover:bg-brand-primary hover:text-brand-bg transition-all">
+            <Trophy size={20} />
+          </a>
+          <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-slate-300 hover:bg-brand-primary hover:text-brand-bg transition-all">
+            <Share2 size={20} />
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-bold mb-6">Producto</h4>
+        <ul class="space-y-4">
+          <li><a href="#features" class="text-slate-400 hover:text-brand-primary transition-colors text-sm">Características</a></li>
+          <li><a href="#download" class="text-slate-400 hover:text-brand-primary transition-colors text-sm">Beta Cerrada</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-white font-bold mb-6">Legal</h4>
+        <ul class="space-y-4">
+          <li><a href="/privacy" class="text-slate-400 hover:text-brand-primary transition-colors text-sm">Privacidad</a></li>
+          <li><a href="mailto:squadbalancer.app@gmail.com" class="text-slate-400 hover:text-brand-primary transition-colors text-sm">Soporte</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs text-slate-500">
+        © {new Date().getFullYear()} SquadBalancer. Hecho con ❤️ para el fútbol amateur.
+      </p>
+      <div class="flex items-center gap-6">
+        <span class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">Hecho en Argentina</span>
+      </div>
+    </div>
+  </div>
+</footer>
