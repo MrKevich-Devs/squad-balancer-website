@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://MrKevich-Devs.github.io',
-  base: '/squed-balancer-website',
+  base: '/squad-balancer-website',
   vite: {
     plugins: [tailwindcss()]
   },
