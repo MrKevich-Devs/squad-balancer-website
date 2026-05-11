@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { ArrowLeft, Trash2, Mail, ShieldCheck } from "lucide-react";
+---
+
+<Layout title="Solicitud de Eliminación de Datos - SquadBalancer">
+  <Navbar />
+
+  <main class="max-w-4xl mx-auto px-4 py-32">
+    <a
+      href={import.meta.env.BASE_URL}
+      class="inline-flex items-center gap-2 text-brand-primary hover:text-brand-primary-light transition-colors mb-12"
+    >
+      <ArrowLeft size={20} />
+      Volver al inicio
+    </a>
+
+    <article class="max-w-none">
+      <h1 class="text-4xl font-bold mb-4 text-white">Eliminación de Datos</h1>
+      <p class="text-slate-400 mb-12">
+        En SquadBalancer, usted tiene el control total sobre su información. Cumplimos con el "Derecho al Olvido" (GDPR Art. 17) y las políticas de Google Play.
+      </p>
+
+      <div class="grid gap-8">
+        <!-- Metodo 1: En la App -->
+        <section class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-brand-primary/10 rounded-xl text-brand-primary">
+              <Trash2 size={28} />
+            </div>
+            <h2 class="text-2xl font-bold text-white">Método 1: Desde la Aplicación (Recomendado)</h2>
+          </div>
+          <p class="text-slate-300 mb-6">
+            La forma más rápida de eliminar sus datos es directamente desde los ajustes de SquadBalancer. Este proceso es instantáneo y definitivo.
+          </p>
+          <ol class="list-decimal pl-6 space-y-3 text-slate-300">
+            <li>Abra <strong>SquadBalancer</strong> en su dispositivo.</li>
+            <li>Diríjase a la pestaña de <strong>Ajustes</strong> (Settings).</li>
+            <li>Seleccione la sección <strong>Privacidad y Datos</strong>.</li>
+            <li>Toque el botón <strong>"Eliminar Mis Datos"</strong>.</li>
+            <li>Confirme la acción en el cuadro de diálogo.</li>
+          </ol>
+        </section>
+
+        <!-- Metodo 2: Email -->
+        <section class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-brand-primary/10 rounded-xl text-brand-primary">
+              <Mail size={28} />
+            </div>
+            <h2 class="text-2xl font-bold text-white">Método 2: Solicitud por Correo Electrónico</h2>
+          </div>
+          <p class="text-slate-300 mb-4">
+            Si ya no tiene acceso a la aplicación, puede solicitar la eliminación de sus identificadores de diagnóstico enviando un correo a:
+          </p>
+          <p class="text-brand-primary font-bold text-lg mb-6">
+            <a href="mailto:mrkevich.dev@gmail.com">mrkevich.dev@gmail.com</a>
+          </p>
+          <div class="bg-slate-800/50 p-4 rounded-lg text-sm text-slate-400">
+            <p><strong>Nota:</strong> Para procesar esta solicitud, es posible que necesitemos su "Firebase Installation ID" (si lo conoce) o información técnica de su dispositivo para identificar su perfil anónimo.</p>
+          </div>
+        </section>
+
+        <!-- Información sobre los datos -->
+        <section class="space-y-6">
+          <div class="flex items-center gap-3">
+            <ShieldCheck class="text-brand-primary" size={24} />
+            <h2 class="text-2xl font-bold text-white">¿Qué datos se eliminan?</h2>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <h3 class="text-lg font-semibold text-white">Datos que se borran:</h3>
+              <ul class="list-disc pl-6 text-slate-400 space-y-1">
+                <li>Lista de jugadores y atributos locales.</li>
+                <li>Historial de equipos generados.</li>
+                <li>Identificadores de instalación (Firebase ID).</li>
+                <li>Registros de errores y diagnósticos vinculados.</li>
+              </ul>
+            </div>
+            <div class="space-y-2">
+              <h3 class="text-lg font-semibold text-white">Datos que conservamos:</h3>
+              <ul class="list-disc pl-6 text-slate-400 space-y-1">
+                <li>Ninguno. SquadBalancer no requiere cuentas ni correos electrónicos, por lo que no queda rastro de su identidad tras la eliminación.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="pt-8 border-t border-slate-800">
+            <p class="text-slate-500 text-sm italic">
+              Tiempo de procesamiento: Las eliminaciones realizadas desde la app son inmediatas. Las solicitudes por correo electrónico se procesan en un máximo de 30 días hábiles.
+            </p>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <Footer />
+</Layout>
